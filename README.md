@@ -11,7 +11,7 @@ Fallowing are the steps for todo service in Todoapp.
 
 #apt install npm
 
-#git clone https://github.com/zslavanya/todo.git
+#git clone https://github.com/zelar-soft-todoapp/todo.git
 
 #cd todo/
 
