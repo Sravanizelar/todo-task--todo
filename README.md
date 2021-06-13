@@ -38,7 +38,19 @@ SyslogIdentifier =todo
 [Install]
 WantedBy=multi-user.target
 
+----------------------------------Below are steps for Redis----------
 
+ #apt update
+  
+ #apt install redis-server
+ 
+ #sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis/redis.conf
+ 
+ #systemctl restart redis
+
+
+
+-------------------------------------------output-----------------------------
 ![WhatsApp Image 2021-05-01 at 5 12 56 PM](https://user-images.githubusercontent.com/82637289/116854104-b0162080-abe6-11eb-8461-4360c6f665f5.jpeg)
 
 ![WhatsApp Image 2021-05-01 at 5 12 56 PM (1)](https://user-images.githubusercontent.com/82637289/116854175-cfad4900-abe6-11eb-8870-302176035f47.jpeg)
