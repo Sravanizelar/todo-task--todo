@@ -1,15 +1,12 @@
 
-Fallowing are the steps for todo service in Todoapp.
-
+  
 #apt update
 
-#mkdir todo
+#apt install npm -y
 
-#cd todo/
-
-#apt install nodejs
-
-#apt install npm
+#useradd -m -s /bin/bash app
+        
+#cd /home/app/
 
 #git clone https://github.com/zelar-soft-todoapp/todo.git
 
@@ -17,19 +14,29 @@ Fallowing are the steps for todo service in Todoapp.
 
 #npm install
 
-#vi /etc/systemd/system/todo.service
-
-#npm start 
-
-#killall nodes
+#vim /etc/systemd/system/todo.service
 
 #systemctl daemon-reload
+  
+#systemctl start todo.service
 
-#systemctl start todo
+#systemctl enable todo.service
+   
+#systemctl status todo.service
 
-#systemctl enable todo
 
-#systemctl status todo
+---------------systemd files ===  todo.service files----------------------
+
+[Unit]
+Description=Todo Service
+
+[Service]
+Environment=REDIS_HOST=172.31.91.107
+ExecStart=/bin/node /home/app/todo/server.js
+SyslogIdentifier =todo
+
+[Install]
+WantedBy=multi-user.target
 
 
 ![WhatsApp Image 2021-05-01 at 5 12 56 PM](https://user-images.githubusercontent.com/82637289/116854104-b0162080-abe6-11eb-8461-4360c6f665f5.jpeg)
